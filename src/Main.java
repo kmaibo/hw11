@@ -1,6 +1,6 @@
 public class Main {
-    public static void leapYear() {
-        int year = 2024;
+    public static void leapYear(int year) {
+        year = 2024;
         if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " год является високосным");
         } else {
@@ -10,21 +10,21 @@ public class Main {
 
     public static void deviceYear() {
         int clientOs = 0;
-        int clientDeviceYear = 2014;
+        int clientDeviceYear = 2015;
         if ((clientOs == 0 && clientDeviceYear < 2015)) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else {
+        } else if(clientOs==0){
             System.out.println("Установите версию приложения для iOS по ссылке");
             if ((clientOs == 1 && clientDeviceYear < 2015)) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            } else {
+            } else if (clientOs==1){
                 System.out.println("Установите версию приложения для Android по ссылке");
             }
         }
     }
 
-    public static void deliveryDistance() {
-        int deliveryDistance = 95;
+    public static void deliveryDistance(int deliveryDistance) {
+        deliveryDistance = 95;
         int deliveryDays = 1;
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + deliveryDays);
@@ -37,8 +37,8 @@ public class Main {
         }
     }
     public static void main(String[] args) {
-        leapYear();
+        leapYear(2024);
         deviceYear();
-        deliveryDistance();
+        deliveryDistance(95);
     }
 }
