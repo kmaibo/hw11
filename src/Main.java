@@ -24,7 +24,6 @@ public class Main {
     }
 
 public static void deliveryDistance(int deliveryDistance) {
-    deliveryDistance = 95;
     int deliveryDays = 1;
     if (deliveryDistance <= 20) {
         System.out.println("Потребуется дней: " + deliveryDays);
